@@ -1,3 +1,7 @@
+# Demo
+
+![image](https://github.com/aminnausin/vue3-comp-api/assets/83550431/cc6d5f1b-857b-4337-88f6-5396a46ec0a5)
+
 # vue-expense-tracker
 
 This template should help get you started developing with Vue 3 in Vite.
