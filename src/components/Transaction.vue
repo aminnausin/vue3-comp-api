@@ -1,14 +1,10 @@
 <template>
-    <li class="border-r-4 border-solid border-[#2ecc71] bg-white shadow-md text-[#333] flex justify-between relative p-3 my-3 group">
-        Cash on ground<span>$20</span><DeleteButton/>
+    <li class="border-r-4 border-solid border-[#2ecc71] bg-white shadow-md text-[#333] flex justify-between relative p-3 my-3 group" :class="{ 'border-[#c0392b]': parseFloat(amount) < 0 }">
+        {{ title }}<span>{{`${parseFloat(amount) < 0 ? '-$' : '$'}${Math.abs(parseFloat(amount))}`}}</span><DeleteButton/>
     </li>
 </template>
 
-<script>
+<script setup>
     import DeleteButton from './DeleteButton.vue'
-	export default{
-		components: {
-			DeleteButton,
-		},
-	};
+	const props = defineProps(['title', 'amount'])
 </script>

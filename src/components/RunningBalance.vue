@@ -4,13 +4,16 @@
             <h4 class="text-md uppercase">
                 Credits
             </h4>
-            <p class="text-[#2ecc71]">+$0.00</p>
+            <p class="text-[#2ecc71]">{{`+$${Math.abs(parseFloat(credits))}`}}</p>
         </div>
         <div class="w-full my-4">
             <h4 class="text-md uppercase">
                 Debits
             </h4>
-            <p class="text-[#c0392b]">-$0.00</p>
+            <p class="text-[#c0392b]">{{`-$${Math.abs(parseFloat(debits))}`}}</p>
         </div>
     </div>
 </template>
+<script setup>
+    const props = defineProps(['credits', 'debits']);
+</script>
